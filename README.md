@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Лабораторна робота №2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Тема
+**Розробка SPA-додатку для моніторингу якості повітря на React**
 
-## Available Scripts
+## Опис
 
-In the project directory, you can run:
+Додаток реалізовано як односторінковий застосунок (SPA) на базі бібліотеки **React**. Основна функціональність полягає у отриманні та візуалізації даних про стан повітря (PM2.5) по різних станціях з використанням API.
 
-### `npm start`
+### Структура проєкту
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **App.js:**  
+  Головний компонент застосунку, що відповідає за отримання даних з API, обробку станів (навантаження, помилка) і передає дані компоненту DataTable для відображення.
+- **DataTable.js:**  
+  Відповідає за рендеринг таблиці зі списком станцій, їхнім рівнем PM2.5, містом і часом вимірювання.
+- **App.css:**  
+  Містить стилі для оформлення додатку і таблиці (центрування, тіні, адаптивність, кольори).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Використані технології
 
-### `npm test`
+- **React.js**
+- **Hooks** (useState, useEffect)
+- **Fetch API** (для отримання даних)
+- **CSS** (стилізація компонентів)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Особливості реалізації
 
-### `npm run build`
+- Вся логіка отримання даних зосереджена у компоненті App.  
+- Відображення станів "завантаження" та "помилка".
+- Зручно відформатована таблиця з даними про якість повітря.
+- Акуратний, мінімалістичний дизайн із обробкою hover/чередування рядків таблиці.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Запуск проєкту
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. `npm install`
+2. `npm start`
+3. Перевірте, щоб бекенд API був доступний за адресою: `http://localhost:3000/api/air-quality`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Автор
 
-### `npm run eject`
+Васильченко С. — студент групи ІП-12, КПІ
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Висновки
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+В процесі виконання роботи освоєно основи розробки додатків на React, використання hooks та API для інтеграції з зовнішніми джерелами даних. Особливу увагу приділено компонентному підходу, управлінню станом та стилізації інтерфейсу для зручної роботи користувача.
